@@ -25,14 +25,14 @@ int echoPin2 = 10;   // Echo for back sensor
 long duration, cm, inches, speed;
 
 // Setting vibrating effects for front distance sensor
-uint8_t frontEffectClose = 7;
-uint8_t frontEffectMedium = 8;
-uint8_t frontEffectFar = 9;
+uint8_t frontEffectClose = 17;
+uint8_t frontEffectMedium = 18;
+uint8_t frontEffectFar = 19;
 
 // Setting vibrating effects for rear distance sensor
-uint8_t rearEffectClose = 1;
-uint8_t rearEffectMedium = 2;
-uint8_t rearEffectFar = 3;
+uint8_t rearEffectClose = 47;
+uint8_t rearEffectMedium = 48;
+uint8_t rearEffectFar = 49;
  
 void setup() {
   //Serial Port begin
@@ -68,13 +68,13 @@ void frontSensor() {
 
   // Test if object is within range
   if(cm <= 100) {
-    playVibration(frontEffectClose, "7 - Soft Bump - 100%");
+    playVibration(frontEffectClose, "17 - Strong Click - 100%");
   }
   else if(cm <= 200 && cm > 100) {
-    playVibration(frontEffectMedium, "8 - Soft Bump - 60%");
+    playVibration(frontEffectMedium, "18 - Strong Click - 60%");
   }
   else if(cm <= 300 && cm > 200) {
-    playVibration(frontEffectFar, "9 - Soft Bump - 30%");
+    playVibration(frontEffectFar, "19 - Strong Click - 30%");
   }
   else {
     Serial.print(inches);
@@ -95,13 +95,13 @@ void rearSensor() {
 
   // Test if object is within range  
   if(cm <= 100) {
-    playVibration(rearEffectClose, "1 - Strong CLick - 100%");
+    playVibration(rearEffectClose, "47 - Buzz 1 - 100%");
   }
   else if(cm <= 200 && cm > 100) {
-    playVibration(rearEffectMedium, "2 - Strong Click - 60%");
+    playVibration(rearEffectMedium, "48 - Buzz 2 - 80%");
   }
   else if(cm <= 300 && cm > 200) {
-    playVibration(rearEffectFar, "3 - Strong Click - 30%");
+    playVibration(rearEffectFar, "49 - Buzz 3 - 60%");
   }
   else {
     Serial.print(inches);
