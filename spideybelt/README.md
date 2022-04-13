@@ -3,6 +3,8 @@
 ## Introduction
 The code used in the project was tied to a prototype for a belt attachment which would act as a device to aid the visually impaired with obstacle detection and avoidance.
 
+![](1639414190225.jpeg)
+
 ## Specifications
 
 The belt attachment itself was made from 3d printed PLA plastic, custom designed by my brother, Eric Malani, to hold the arduino uno as well as the front and rear breadboards. 
