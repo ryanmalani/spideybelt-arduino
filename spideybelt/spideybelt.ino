@@ -78,9 +78,9 @@ void frontSensor() {
   }
   else {
     Serial.print(inches);
-    Serial.print("in front, ");
+    Serial.print("in, ");
     Serial.print(cm);
-    Serial.print("cm front");
+    Serial.print("cm");
     Serial.println();
   }
  
